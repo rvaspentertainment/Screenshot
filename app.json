@@ -3,14 +3,7 @@
     "description": "A Modular telegram bot for Screenshots & Trim Videos.",
     "logo": "https://telegra.ph/file/77fda23e2fa42714a0c53.jpg",
     "repository": "https://github.com/MaviMods/Screenshot_bot",
-    "buildpacks":[
-        {
-            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
-        },
-        {
-            "url": "heroku/python"
-        }
-    ],
+    "stack": "container",
     "keywords": [
         "telegram bot",
         "pyrogram"
@@ -85,7 +78,7 @@
              "required": false
         }
     },
-    
+    "addons": [],
     "buildpacks": [
         {
             "url": "heroku/python"
@@ -93,5 +86,11 @@
         {
             "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
         }
-    ]
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
 }
