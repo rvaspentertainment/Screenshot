@@ -1,16 +1,13 @@
-from flask import Flask
+#Thank you LazyDeveloper for helping me in this journey !
+#Must Subscribe On YouTube @LazyDeveloperr 
 
+from flask import Flask
 app = Flask(__name__)
 
-
-
 @app.route('/')
-
 def hello_world():
-
-    return 'GrryMatters'
-
+    return '@LazyDeveloper'
 
 
-
+if __name__ == "__main__":
     app.run()
