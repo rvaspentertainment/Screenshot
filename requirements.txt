@@ -1,8 +1,8 @@
-pyrofork  
+pyrofork 
 tgcrypto
 motor
 dnspython
-async-timeout
-aiohttp
+async-timeouta
+iohttp
 Flask
 gunicorn
