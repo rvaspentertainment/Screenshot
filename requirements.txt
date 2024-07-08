@@ -3,6 +3,6 @@ tgcrypto
 motor
 dnspython
 async-timeout
-iohttp
+aiohttp
 Flask
 gunicorn
