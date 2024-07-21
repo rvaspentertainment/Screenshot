@@ -1,5 +1,4 @@
 import datetime
-
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
@@ -7,14 +6,12 @@ from ..utils import Utilities
 from ..screenshotbot import ScreenShotBot
 from ..config import Config
 
-
-@ScreenShotBot.on_message(
+@ScreenShotBot.on_edited_message(
     filters.private
-    & (filters.text | filters.media)
-    & filters.incoming
+    & ((filters.text | filters.media)
+    & filters.incoming)
 )
-async def _(c, m):
-
+async def handle_message(client, m):
     if m.media:
         if not Utilities.is_valid_file(m):
             return
@@ -47,4 +44,4 @@ async def _(c, m):
     await snt.edit_text(
         text=f"Choose one of the options.\n\nTotal duration: `{datetime.timedelta(seconds=duration)}` (`{duration}s`)",
         reply_markup=InlineKeyboardMarkup(btns),
-    )
+)
