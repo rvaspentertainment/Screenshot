@@ -11,6 +11,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from aiohttp import web
 
 from bot.config import Config
+from bot.plugins import web_server
 from bot.workers import Worker
 from bot.utils.broadcast import Broadcast
 
