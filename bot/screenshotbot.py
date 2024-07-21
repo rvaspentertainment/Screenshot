@@ -8,6 +8,7 @@ from contextlib import contextmanager
 
 from pyrogram import Client
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from aiohttp import web
 
 from bot.config import Config
 from bot.workers import Worker
